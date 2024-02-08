@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoussamAboudouGames</title> 
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        a {
+            text-decoration: none; /* Remove underlines from links */
+            color: #0366d6; /* Set link color */
+        }
+        a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+        .search-container {
+            margin-bottom: 20px;
+        }
+        .search-container input[type=text] {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-container input[type=submit] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-container input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        /* Center the search container */
+        .center-container {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1><marquee>Welcome to the best popular games, you can download any of your favorite games!</marquee></h1>
+    <center><h2>Most Popular Games</h2></center>
+    <!-- Center container added here -->
+    <div class="center-container">
+        <div class="search-container">
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="Search games..." name="search">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </div>
+    <!-- Rest of your code continues... -->
+
+    <table id="gamesTable">
+        <tr>
+            <th>Name of the Games</th>
+            <th>Download the Games</th>
+        </tr>
+        <tr>
+            <td>Roblox</td>
+            <td><a href="https://www.roblox.com/download/client?os=win" target="_blank">Download Roblox</a></td>
+        </tr>
+        <tr>
+            <td>Minecraft</td>
+            <td><a href="https://tlauncher.org/installer" target="_blank">Download Minecraft Cracked Version</a></td>
+        </tr>
+        <tr>
+            <td>Fortnite from Epic Games</td>
+            <td><a href="https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi?trackingId=b4ce35656c8d4d2a9caeb49f613c1c72" target="_blank">Download Epic Games</a></td>
+        </tr>
+        <tr>
+            <td>Counter Strike</td>
+            <td><a href="https://dw.malavida.com/MHhKemlHcFNGNkRpU1RoZDFNLzh6dFp3bExyclpJeTRzOEJ1cXZFNEVHK2w5K3ZrRGhrV1ZpcG9ZL0M0N08vYVA1MFh0QXZZeXpp/eWx6UWdKdEovR09vekl6VDh2WnZvemlqK0N0SE80RmdQZ1doOEJsQWV3cmJJb2FTUy9lNW01ZGZ1Nk5zYXpxaDdJNVFoN2QvZTBs/UTBlV0VadDFyeGlndTgxUDB3MmRQUkNOc1NrYjcwQ3lvekV3c2p6RlNyMlpWK1grWHM1bDFZN0w5Rks3NW85Qi9wOTBFT0M4dlpL/U3lCR29MWFU4MnE1M0k5RVZLamxtM3BIRnFwYXVBSVFBYzUyb1MwZE1HajExSXFtcXNJSWR3bWdZZFJ0Ny9EdHl5QjZCNWdhbnow/cERjaERXYnpxb0t6LzBxU0p1aUJXY2JWMUZTaVBpY29QU0t4Y3owNlJvSTI0eXQ4WmxUbTU1TXVONlJCekNYb0dGNGRFZUh0TWNu/NURVMW9MRTdzSjZreG9jcUFzQnYzQStBMXpPUlVhZmNSOVRucmc3YWNVaFFFUmpkeTNtTTdwazlLam5zUnE4TngwLzhjWVkycm10/c0E0aTFONy93NXdDaEE1M1NIbHpiQmpEd01HeS9mTHREY3BvVU1WNy9jN1NEM0R0Q0s2WUdiRmViMWF4eE9yTFBJZm9IUWd3QlRz/cG83OHc4MnpvZVJxa0oxVG1OL1lUSit2enVGN2RnVUhWU0tCek9QUDE5SHRRamFJeU02Z3lOY1B5SmZwQk9CNk84RnlSYlBBUT09/d5e1a7351b66e073" target="_blank">Download Counter Strike</a></td>
+        </tr>
+        <tr>
+            <td>Apex Legends from Steam</td>
+            <td><a href="https://store.steampowered.com/app/1172470/Apex_Legends/" target="_blank">Download Steam and Apex Legends</a></td>
+        </tr>
+        <tr>
+            <td>League of Legend</td>
+            <td><a href="https://signup.leagueoflegends.com/en-gb/signup/redownload?page_referrer=index" target="_blank">Download league of legends</a></td>
+        </tr>
+
+    </table>
+
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var input = document.getElementById("searchInput").value.toLowerCase();
+            var table = document.getElementById("gamesTable");
+            var rows = table.getElementsByTagName("tr");
+            var found = false;
+
+            for (var i = 1; i < rows.length; i++) {
+                var gameName = rows[i].getElementsByTagName("td")[0].innerText.toLowerCase();
+
+                if (gameName.includes(input)) {
+                    rows[i].style.display = "";
+                    found = true;
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+
+            if (!found) {
+                var noResultsRow = table.insertRow(-1);
+                var noResultsCell = noResultsRow.insertCell(0);
+                noResultsCell.colSpan = 2;
+                noResultsCell.style.textAlign = "center";
+                noResultsCell.textContent = "Sorry,The game not found 😢";
+            }
+        });
+    </script>
+</body>
+</html>
+
+    <h1>About Roblox</h1>
+    <h1>What is Roblox ?</h1>
+    
+        <h3> Roblox is a <mark>global platform</mark> where millions of people come together every day to imagine, create, and share experiences together in immersive 3D worlds created by users. The genres of gaming experiences on Roblox are limitless, just like the imagination of the creators.
+        
+        All the online games you see on the platform have been built by members of the Roblox community for members of the Roblox community. Players can build the perfect theme park, participate in a professional car race, take part in a fashion show, become a superhero, or simply design a dream house and hang out with friends. Roblox is free to download and can be played on all smartphones, tablets, computers as well as on Xbox One, Oculus Rift, and HTC Vive.</h3>
+        
+        
+        
+        
+        
+        </p>
+   <h1>Building Safer Digital Worlds with Roblox</h1>
+   <h3>We are continuously developing cutting-edge technologies to ensure that the Roblox platform remains a safe and fun space for players around the world.</h3>
+    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*U_NFHz24R-hNapcX" width="fullscreen">
+    <p><h1>About Minecraft</h1></p>
+    <h3>Minecraft is a game made up of blocks, creatures, and community. Blocks can be used to reshape the world or build fantastical creations. Creatures can be battled or befriended, depending on your playstyle. Experience epic adventures solo or with friends, there’s no wrong way to play.
+        Unless you’re digging straight down.</h3>
+        <div class="sidebar">
+            <img src="https://www.minecraft.net/content/dam/games/minecraft/screenshots/allay.png" alt="Image 1">
+            <img src="https://www.minecraft.net/content/dam/games/minecraft/screenshots/Warden_2.png" alt="Image 2">
+            <img src="https://www.minecraft.net/content/dam/games/minecraft/screenshots/Ancient_City_2.png" alt="Image 3">
+            <!-- Add more images as needed -->
+        </div>
+        <h1>About Fortnite</h1>
+        <h3>Fortnite is a third-person shooter game where up to 100 players compete to be the last person or team standing. You can compete alone or join a team of up to four. You progress through the game by exploring the island, collecting weapons, building fortifications and engaging in combat with other players. You can make purchases for access to the full game or for bonus weapons. Players communicate with other players through online messaging or voice chat. Fortnite Battle Royale is a free version of the Fortnite game.</h3>
+        <div class="sidebar">
+         <img src="https://www.webwise.ie/wp-content/uploads/2018/04/BattleRoyale.png" alt="image1">
+         <img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_Fortnite_image1600w.jpg" alt="image1">
+         <img src="https://cdn.vox-cdn.com/thumbor/-8YkORV8jFbh0IElz7b6vKNHHUw=/0x0:1920x1080/920x613/filters:focal(502x437:808x743):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/59141577/Fortnite_Battle_Royale_guide.1521841996.jpg" alt="image1">
+         </div>
+         <h1>About counter strike</h1>
+         <h3>Counter-Strike 2 is a 2023 <mark>multiplayer tactical</mark> first-person shooter game developed and published by Valve. It is the fifth main installment of the Counter-Strike series. Developed as an updated version of the previous main entry, Counter-Strike: Global Offensive (2012), it was announced on March 22, 2023, and was released on September 27, 2023, replacing Global Offensive on Steam.
+
+            Like its predecessor, the game pits two teams, the Counter-Terrorists against each other in various objective-based game modes. Counter-Strike 2 features major technical improvements over Global Offensive, including a move from the Source game engine to Source 2, improved graphics and new server architecture. In addition, many maps from Global Offensive were updated to use the features of Source 2, with some maps receiving complete overhauls.
+            
+            Upon release, Counter-Strike 2 received generally favorable reviews from critics. In contrast, player reception was mixed; criticism was directed at the delisting of Global Offensive from Steam, degraded game performance, and the removal of several features that had been present in Global Offensive. As a result, Counter-Strike 2 received thousands of negative user reviews on Steam, leading to it becoming one of the lowest-rated Valve titles on the platform.</h3>
+            <div class="sidebar">
+         <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/CS2_Gameplay.png" alt="image 1">
+         <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/ss_ef82850f036dac5772cb07dbc2d1116ea13eb163.1920x1080.jpg?t=1698860631" alt="image 2">
+         <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/ss_ef98db5d5a4d877531a5567df082b0fb62d75c80.1920x1080.jpg?t=1698860631" alt="image 3">
+            </div>
+            <h1>Apex legends</h1>
+            <h3>Apex Legends is a free-to-play battle royale-hero shooter game developed by Respawn Entertainment and published by Electronic Arts. It was released for PlayStation 4, Windows, and Xbox One in February 2019, for Nintendo Switch in March 2021, and for PlayStation 5 and Xbox Series X/S in March 2022. A mobile version of the game designed for touchscreens titled Apex Legends Mobile was released in May 2022 on Android and iOS. The game supports cross-platform play, excluding the aforementioned mobile platforms.
+
+                Before the match, players form into two- or three-player squads, and select from pre-designed characters with distinctive abilities, known as "Legends". The game has two gameplay modes. In "Battle Royale", up to 20 three-person squads or 30 two-person duos land on an island and search for weapons and supplies before attempting to defeat all other players in combat. The available play area on the island shrinks over time, forcing players to keep moving or else find themselves outside the play area which can be fatal. The final team alive wins the round. In "Arenas", players form into three-player squads and fight against another squad in a 3v3 team deathmatch over a series of rounds to determine the winner of the match. Teams win when their team has at least 3 points and is 2 points ahead.
+                
+                Apex Legends is set in the same science fiction universe as Respawn Entertainment's Titanfall series, with several characters from the Titanfall series appearing either as minor characters or playable Legends. Work on the game began around late 2016, though the project remained a secret right up until its launch. The game's release in 2019 came as a surprise, as until that point it had been assumed that Respawn Entertainment was working on a third installment to the Titanfall franchise, the studio's previous major game. Apex Legends received generally positive reviews from critics, who praised its gameplay, progression system, and fusion of elements from various genres. Some considered it a worthy competitor to other battle royale games. Apex Legends surpassed 25 million players by the end of its first week, and 50 million within its first month. By April 2021, it had approximately 100 million players making it one of the most played video games of all time by player count.</h3>
+                <div class="sidebar">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/f/f8/Apex_Legends_gameplay_screenshot.jpg "  alt="image 1">
+                    <img src="https://assets.xboxservices.com/assets/20/8d/208d0429-02fc-45d7-92f5-0ca469c83b77.jpg?n=Apex-Legends_Feature-Image-Priority-Full-Width-0_S13-Strategic-Combat_1248x702.jpg" alt="image 2">
+                    <img src="https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2020/5/13/i1pyqdapxumjllhfjoco/duos-apex-legends" alt="image3">
+                </div>
+                <h1>About league of legends</h1>
+                <h3>League of Legends (LoL), commonly referred to as League, is a 2009 multiplayer online battle arena video game developed and published by Riot Games. Inspired by Defense of the Ancients, a custom map for Warcraft III, Riot's founders sought to develop a stand-alone game in the same genre. Since its release in October 2009, League has been free-to-play and is monetized through purchasable character customization. The game is available for Microsoft Windows and macOS.
+
+                    In the game, two teams of five players battle in player-versus-player combat, each team occupying and defending their half of the map. Each of the ten players controls a character, known as a "champion", with unique abilities and differing styles of play. During a match, champions become more powerful by collecting experience points, earning gold, and purchasing items to defeat the opposing team. In League's main mode, Summoner's Rift, a team wins by pushing through to the enemy base and destroying their "Nexus", a large structure located within.
+                    
+                    League of Legends has received generally positive reviews; critics highlighted its accessibility, character designs, and production value. The game's long lifespan has resulted in a critical reappraisal, with reviews trending positively; it is considered one of the greatest video games ever made. However, negative and abusive in-game player behavior, criticized since the game's early days, persists despite Riot's attempts to fix the problem. In 2019, League regularly peaked at eight million concurrent players, and its popularity has led to tie-ins such as music, comic books, short stories, and the animated series Arcane. Its success has spawned several spin-off video games, including League of Legends: Wild Rift, a mobile version, Legends of Runeterra, a digital collectible card game and Ruined King: A League of Legends Story, a turn-based role-playing game, among others. A massively multiplayer online role-playing game based on the property is in development.
+                    
+                    League of Legends is the world's largest esport, with an international competitive scene consisting of multiple regional leagues; they culminate in an annual League of Legends World Championship. The 2019 event registered over 100 million unique viewers, peaking at a concurrent viewership of 44 million during the finals. Domestic and international events have been broadcast on livestreaming websites such as Twitch, YouTube, Bilibili, and on cable television sports channel ESPN.</h3>
+                    <div class="sidebar">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/c/ca/League_of_Legends_Screenshot_2018.png" alt="image 1">
+                        <img src="https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/EGS_LeagueofLegends_RiotGames_S1_2560x1440-80471666c140f790f28dff68d72c384b" alt="image2">
+                        <img src="https://variety.com/wp-content/uploads/2018/07/league-of-legends-2015-05-15-18-05-46-91.png" alt="image 3">
+                    </div>
+                    <h1><strong>Enjoy you're game 😃😘</strong></h1>
+                     
+                    
+    <div class="description-section">
+        <h2>Contact Information</h2>
+        <div class="contact-info">
+            <p>Phone Number: +212 637869344</p>
+            <p>Email: houssamaboudou10@gmail.com</p>
+        </div>
+        <h2>Creator Information</h2>
+        <div class="creator-info">
+            <p>Created by: Houssam Aboudou</p>
+            <p>Website: www.HoussamAboudouGames.ma</p>
+        </div>
+    </div>
+
+</body>
+</html>
